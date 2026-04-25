@@ -5,7 +5,6 @@ import me.RobotoRaccoon.InventoryPortal.InventoryPortal;
 import me.RobotoRaccoon.InventoryPortal.Menu.EditMenu;
 import me.RobotoRaccoon.InventoryPortal.Menu.EditOption;
 import me.RobotoRaccoon.InventoryPortal.Warp;
-import org.apache.commons.lang.WordUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -65,7 +64,7 @@ public class PlayerChatListener implements Listener {
     }
 
     private List<String> warpString(String message) {
-        String wrapped = WordUtils.wrap(message, SPLIT_COLUMN, null, true);
-        return Arrays.asList(wrapped.split("\\n"));
+        List<String> words = Arrays.asList(message.split(" "));
+        return words;
     }
 }

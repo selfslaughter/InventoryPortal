@@ -109,7 +109,7 @@ public class Random extends SubCommand {
             return;
         }
 
-        PotionEffect effect = new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, duration, 1, true, false);
+        PotionEffect effect = new PotionEffect(PotionEffectType.RESISTANCE, duration, 1, true, false);
         player.addPotionEffect(effect);
     }
 }
